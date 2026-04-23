@@ -14,7 +14,7 @@ const About = () => {
         <div className="max-w-3xl mx-auto">
           {/* White text for readability */}
           <p className="text-white/80 text-lg leading-relaxed text-center mb-8">
-            I’m an engineering student with a strong interest in Artificial Intelligence, Generative AI, and modern web development. I enjoy building intelligent systems and interactive applications that solve real-world problems while maintaining clean and user-friendly design.
+            I’m an Computer Science student with a strong interest in Artificial Intelligence, Generative AI, and modern web development. I enjoy building intelligent systems and interactive applications that solve real-world problems while maintaining clean and user-friendly design.
 
             Currently, I’m focused on deepening my understanding of machine learning and deep learning, while also exploring the rapidly evolving field of Generative AI. I like turning ideas into practical projects, whether it’s developing models, experimenting with new technologies, or creating full-stack applications.
 

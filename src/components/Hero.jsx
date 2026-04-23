@@ -2,6 +2,9 @@ import { FiGithub, FiLinkedin } from 'react-icons/fi';
 import { SiReact, SiPython, SiTensorflow, SiJavascript, SiTailwindcss, SiGit, SiMongodb, SiDocker } from 'react-icons/si';
 
 const Hero = () => {
+  // Dynamic base path - works locally and on GitHub Pages
+  const basePath = import.meta.env.BASE_URL;
+  
   const floatingIcons = [
     { Icon: SiReact, color: '#00f5d4', top: '10%', right: '15%', delay: 0 },
     { Icon: SiPython, color: '#00f5d4', top: '30%', right: '5%', delay: 1 },
@@ -13,28 +16,20 @@ const Hero = () => {
     { Icon: SiDocker, color: '#00f5d4', top: '75%', left: '20%', delay: 0.8 },
   ];
 
-  // UPDATE THESE WITH YOUR INFORMATION
   const personalInfo = {
-    name: "Yashika Gupta",  // Change to your name
-    title: "AI/ML Engineer | Web Developer | GenAI Enthusiast",  // Change your title
-    github: "https://github.com/YASHI102",  // Replace with your GitHub URL
-    linkedin: "https://linkedin.com/in/yashi-singh"  // Replace with your LinkedIn URL
+    name: "Yashika Gupta",
+    title: "AI/ML Engineer | Web Developer | GenAI Enthusiast",
+    github: "https://github.com/yashikagupta-ai",
+    linkedin: "https://www.linkedin.com/in/yashika-gupta-274540333/"
   };
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
       {/* Flowing Gradient Background */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Blob 1 - Top Left */}
         <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-3xl bg-blob-1"></div>
-        
-        {/* Blob 2 - Bottom Right */}
         <div className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-cyan-400/8 rounded-full blur-3xl bg-blob-2"></div>
-        
-        {/* Blob 3 - Center Right */}
         <div className="absolute top-1/2 right-[-5%] transform -translate-y-1/2 w-[400px] h-[400px] bg-teal-500/5 rounded-full blur-3xl bg-blob-3"></div>
-        
-        {/* Blob 4 - Center Left */}
         <div className="absolute top-1/3 left-[-5%] w-[350px] h-[350px] bg-cyan-500/5 rounded-full blur-3xl bg-blob-1" style={{ animationDelay: '-5s' }}></div>
       </div>
 
@@ -42,17 +37,15 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-6">
-            {/* Your Name - Update this */}
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-cyan-400">
               {personalInfo.name}
             </h1>
-            {/* Your Title - Update this */}
             <h2 className="text-2xl sm:text-3xl text-cyan-300">
               {personalInfo.title}
             </h2>
-            {/* White text for readability */}
             <p className="text-white/80 text-lg leading-relaxed">
-              I’m an engineering student passionate about AI, Generative Models, and building modern web applications. I enjoy turning complex ideas into practical solutions and continuously exploring how intelligent systems can shape the future.
+              Passionate about creating intelligent systems and beautiful web experiences.
+              Currently exploring the frontiers of Generative AI and building innovative solutions.
             </p>
             <div className="flex gap-4">
               <button 
@@ -69,10 +62,9 @@ const Hero = () => {
               </button>
             </div>
             
-            {/* Social Icons with your links */}
             <div className="flex gap-6 pt-4">
               <a 
-                href="https://github.com/yashikagupta-ai"
+                href={personalInfo.github}
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-white/60 hover:text-cyan-400 transition-all duration-300 hover:scale-110 icon-glow"
@@ -80,7 +72,7 @@ const Hero = () => {
                 <FiGithub size={28} />
               </a>
               <a 
-                href="https://www.linkedin.com/in/yashika-gupta-274540333/"
+                href={personalInfo.linkedin}
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-white/60 hover:text-cyan-400 transition-all duration-300 hover:scale-110 icon-glow"
@@ -92,7 +84,6 @@ const Hero = () => {
 
           {/* Right Avatar with Glowing Ring */}
           <div className="relative flex justify-center">
-            {/* Floating Icons Around Avatar */}
             {floatingIcons.map((item, index) => (
               <div
                 key={index}
@@ -112,22 +103,16 @@ const Hero = () => {
               </div>
             ))}
             
-            {/* Main Avatar Container */}
             <div className="relative">
-              {/* Outer pulsing ring */}
               <div className="absolute inset-[-8px] rounded-full border border-cyan-400/40 pulse-ring"></div>
-              
-              {/* Inner ring */}
               <div className="absolute inset-[-4px] rounded-full border border-cyan-400/60"></div>
-              
-              {/* Soft glow behind avatar */}
               <div className="absolute inset-[-20px] rounded-full bg-cyan-500/10 blur-2xl"></div>
               
-              {/* Avatar Image - Your Custom Image (Centered) */}
               <div className="relative w-72 h-72 sm:w-96 sm:h-96 rounded-full overflow-hidden border-2 border-cyan-400 shadow-xl float-slow">
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-transparent z-10"></div>
+                {/* DYNAMIC IMAGE PATH - Fixes GitHub Pages issue */}
                 <img
-                  src="/avatar.png"
+                  src={`${basePath}avaatar1.png`}
                   alt="Profile Avatar"
                   className="w-full h-full object-cover object-center"
                   style={{ objectPosition: 'center 45%' }}
