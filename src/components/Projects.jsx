@@ -10,7 +10,7 @@ const Projects = () => {
     },
     {
       title: 'MeshNet (Distributed Systems)',
-      desciption: 'An offline-first emergency communication platform that enables devices to share alerts, safe routes, and aid information without internet or cellular networks using QR-based relay and peer-to-peer communication.',
+      description: 'An offline-first emergency communication platform that enables devices to share alerts, safe routes, and aid information without internet or cellular networks using QR-based relay and peer-to-peer communication.',
       tech: ['React', 'Vite', 'Tailwind CSS','Capacitor','Workbox','Google Nearby Connections API', 'QR Code Technologies', 'Local Storage'],
       github: 'https://github.com/yashikagupta-ai/MeshNet-main.git'
     },
@@ -24,6 +24,8 @@ const Projects = () => {
       title: 'digital-stress-contagion ( Agent-Based Modeling and Data Science)',
       description: 'Developed an agent-based simulation to study how digital stress spreads through social networks, analyzing the impact of user behavior, peer influence, and intervention strategies on overall network well-being.',
       tech: ['Pytorch', 'Scikit-learn', 'NetworkX','K-Means Clustering','Agent-Based Modeling', 'Data Analysis'],
+      github: 'https://github.com/yashikagupta-ai/digital-stress-contagion.git'
+      
     },
     {
       title: 'Predicting Human Annotator Disagreement (Deep Neural Network',
